@@ -77,7 +77,46 @@ boton.removeEventListener("click",function() --> Para eleminiar un evento
     console.log("Se ejecuta el codigo pero NO se va a google")
   }
 ---------------------------------
+  Formularios
+  <form name="datos" id="formulario">
+    <label for="nombre">Nombre</label>
+    <input type="text" name="nombre" id="nombre">
+    <input type="text" name="apellido" id="apellido">
+    <input type="submit" value="Enviar">
+  </form>
+  let datosPersonales = document.forms.datos ------> te pilla los valores de los inputs del formulario a traves de su "name"
+  Se crea un array y se busca con document.forms[0] o document.forms["datos"]
+  let nombre = datosPersonales.elements.nombre.value para el valor solo y sin el .value para el input entero
 
+  Radio
+  <form name="encuesta">
+    Indica tu edad:
+    <input type="radio" name="edad" value="menor18">
+    <input type="radio" name="edad" value="mayor18" checked>
+  </form>
 
+  Checkbox
+  <input type="checkbox" name="intereses" value="deporte">
+  <input type="checkbox" name="intereses" value="cine">
 
+  Select
+  <select id="lenguaje">
+    <option value="java">Java</option>
+    <option value="javaS">JavaS</option>
+  </select>
+
+  Eventos de formularios:
+  focus, blur, change, input, submit
+
+  Validacion de formularios:
+  form.checkValidity() form.reportValidity()
+
+--------------------------------------------
+  HTML personalizados
+
+  Deben contener un guion en el nombre
+  <mi-contador>
+  customElements.define('nombre-elemento', ClaseElemento, { extends: 'NombreElementoBase' })
+
+--------------------------------------------
 */

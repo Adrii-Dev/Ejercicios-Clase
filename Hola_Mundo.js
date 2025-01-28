@@ -119,4 +119,14 @@ boton.removeEventListener("click",function() --> Para eleminiar un evento
   customElements.define('nombre-elemento', ClaseElemento, { extends: 'NombreElementoBase' })
 
 --------------------------------------------
+  Almacenamiento local
+
+  localStorage hay que eliminar de forma exlicita, no se borran por si solo
+  sessionStorage se borra al cerrar la ventana
+
+  localStorage.setItem("nombre", "valor")
+  localStorage.getItem("nombre")
+  localStorage.removeItem("nombre")
+  localStorage.clear()
+  localStorage.length
 */
